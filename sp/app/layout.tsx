@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} text-xl`}>
-          <div className="container">
-            <Header />
-            {children}
-          </div>
+            <Header title={"7457+ Job Listed"} description={"Find Your Dream Job"} />
+            <div className="container">
+              {children}
+            </div>
         </body>
     </html>
   );
