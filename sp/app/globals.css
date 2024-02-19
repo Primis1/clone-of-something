@@ -8,26 +8,44 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+section {
+
+}
+
+h1 {
+
+}
+
+p   {
+
+}
+
+a {
+
+}
+
+.container {
+  height: auto;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.btn {
+        text-align: center;
+        border-style: none;
+        border-radius: 10px;
+        padding: 10px 30px;
+        cursor: pointer;
+        font-weight: medium;
+        transition: all 0.2s;
+    }
