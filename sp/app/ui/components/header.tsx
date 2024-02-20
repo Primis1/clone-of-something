@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import h from '@/app/ui/components/header.module.scss';
+import h from './header.module.scss';
 
 export default function Header(props: { title: string; description: string }) {
       
