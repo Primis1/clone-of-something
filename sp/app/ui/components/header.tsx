@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import h from './header.module.scss';
 
-export default function Header(props: { title: string; description: string }) {
+export default function Header() {
       
     return (
-     <section className={h.header__section}>  
-
+    <div className='absolute right-0 left-0'>
         <div className="container">
             <header className='header'>
 
@@ -36,14 +35,14 @@ export default function Header(props: { title: string; description: string }) {
 
                 </div>
             </header>
-
+            {/* 
             <>
-                <h1 className='text-3xl'>{props.title}</h1>
-                <p className='text-4xl'>{props.description}</p>
-            </>
+                <h1 className='text-3xl'></h1>
+                <p className='text-4xl'></p>
+            </> */}
             
          </div>
-       
-    </section> 
+    </div>
+
     )
   }

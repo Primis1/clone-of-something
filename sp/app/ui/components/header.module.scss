@@ -1,10 +1,5 @@
-.header__section {
-  margin: 0 auto;
-  height: 1000px;
-  background: url('/nvbar.png') no-repeat center;
-  background-size: cover;
-
   .header {
+    position: absolute;
     padding-top: 40px;
     position: sticky;
   }
@@ -21,7 +16,6 @@
         align-items: center;
       }
     }
-}
 
 .image {
   width: 100%;

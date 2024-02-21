@@ -1,0 +1,22 @@
+.footer__section {
+    padding-top: 241px;
+    margin: 0 auto;
+    height: 930px;
+    background: url('/Footer.png') no-repeat center;
+    background-size: cover;
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 20px 0px;
+    }
+
+    .footer__title {
+        padding: 17px 0 27px 0;
+    }
+
+    .footer__list {
+        padding: 24px 0;
+    }
+}

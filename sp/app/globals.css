@@ -34,6 +34,7 @@ time, mark, audio, video {
 }
 
 body {
+  position: relative;
 	line-height: 1;
 }
 ol, ul {
@@ -60,8 +61,11 @@ table {
   box-sizing: border-box;
 }
 
-section {
-
+.header__section {
+  margin: 0 auto;
+  height: 830px;
+  background: url('/nvbar.png') no-repeat center;
+  background-size: cover;
 }
 
 h1 {
@@ -74,6 +78,10 @@ p   {
 
 a {
 
+}
+
+ul {
+  gap: 10px;
 }
 
 .container {

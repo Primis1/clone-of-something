@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { roboto } from "@/app/ui/fonts/fonts";
 import Header from "./ui/components/header";
+import Footer from "./ui/components/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,10 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} text-xl`}>
-            <Header title={"7457+ Job Listed"} description={"Find Your Dream Job"} />
-            <div className="container">
+              <Header />
               {children}
-            </div>
+              <Footer />
         </body>
     </html>
   );
