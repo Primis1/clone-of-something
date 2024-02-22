@@ -1,4 +1,4 @@
-import Button from './ui/components/button'
+import Button from './ui/components/btn/button'
 import res from '@/app/lib/fetch'
 
 
