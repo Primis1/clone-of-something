@@ -35,12 +35,6 @@ export default function Header() {
 
                 </div>
             </header>
-            {/* 
-            <>
-                <h1 className='text-3xl'></h1>
-                <p className='text-4xl'></p>
-            </> */}
-            
          </div>
     </div>
 

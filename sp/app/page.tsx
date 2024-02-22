@@ -1,4 +1,6 @@
-import Button from './ui/button'
+import Button from './ui/components/button'
+import res from '@/app/lib/fetch'
+
 
 export default function Home() {
   return (
@@ -15,7 +17,8 @@ export default function Home() {
         </section>
 
         <div className="container">
-            json z info about params
+          { res && res.map((prof, index) => <Button key={index} t={prof}/>) }
+          
         </div>
     </main>
   );
