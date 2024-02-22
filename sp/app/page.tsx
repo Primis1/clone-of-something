@@ -1,8 +1,10 @@
 import Button from './ui/components/btn/button'
-import res from '@/app/lib/fetch'
-
+import Fetch from '@/app/lib/fetch'
+// import {useState } from 'react'
 
 export default function Home() {
+  // const resp = <Fetch />
+
   return (
     <main>
         <section className='header__section'>
@@ -17,8 +19,7 @@ export default function Home() {
         </section>
 
         <div className="container">
-          { res && res.map((prof, index) => <Button key={index} t={prof}/>) }
-          
+          { res && res.foEach((prof, index) => <Button key={index} t={prof}/>) }
         </div>
     </main>
   );
