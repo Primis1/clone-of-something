@@ -1,17 +1,25 @@
-import { useState, useEffect } from 'react';
+'use client';
 
-export default function Fetch() {
-    const [res, setRes] = useState([]);
+import { useState, useEffect, ReactNode } from 'react';
+
+type ProfType = any; 
+
+interface FetchProps {
+  children: (data: ProfType[]) => ReactNode;
+}
+
+export default function Fetch({ children }: FetchProps) {
+    const [res, setRes] = useState<ProfType[]>([]);
 
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch('./prof.json');
-            const data = await response.json();
+            const data: ProfType[] = await response.json();
             setRes(data);
         };
 
         fetchData();
     }, []);
 
-    return res;
+    return children(res);
 }

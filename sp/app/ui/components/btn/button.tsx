@@ -2,7 +2,7 @@ import b from './button.module.scss'
 
 export default function Button(props: {t:string}) {
     return( 
-<button className={b.btn}>{props.t}</button>
+        <button className='btn'>{props.t}</button>
     )
 }
 

@@ -1,3 +1,4 @@
+'use client'
 import Button from './ui/components/btn/button'
 import Fetch from '@/app/lib/fetch'
 // import {useState } from 'react'
@@ -19,7 +20,7 @@ export default function Home() {
         </section>
 
         <div className="container">
-          { res && res.foEach((prof, index) => <Button key={index} t={prof}/>) }
+          <Button t={Fetch}/>
         </div>
     </main>
   );
