@@ -1,12 +1,10 @@
-{
-    "prof": [
-      "Application Development",
-      "Software Developer/Engineer (Programming)",
-      "Website Design and/or Developer",
-      "Database Administrator",
-      "IT Support/Helpdesk",
-      "IT Project Manager",
-      "Product Manager"
-    ]
-  }
-  
+[
+  {"title": "Application Development"},
+  {"title": "Software Developer/Engineer (Programming)"},
+  {"title": "Website Design and/or Developer"},
+  {"title": "Database Administrator"},
+  {"title": "IT Support/Helpdesk"},
+  {"title": "IT Project Manager"},
+  {"title": "Product Manager"}
+]
+

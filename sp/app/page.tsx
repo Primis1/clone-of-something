@@ -1,27 +1,34 @@
 'use client'
+import { useState, useEffect } from 'react'
 import Button from './ui/components/btn/button'
-import Fetch from '@/app/lib/fetch'
-// import {useState } from 'react'
 
 export default function Home() {
-  // const resp = <Fetch />
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.weatherapi.com/v1/current.json?key=dcf27b0a701c4de5907162206241601&q=Mississauga&aqi=no')
+    .then(response => response.json())
+    .then(data => setInfo(data))
+    .catch(error => console.error('Error:', error));
+  }, []);
 
   return (
     <main>
         <section className='header__section'>
           <div className="container">
-            <div className="pt-218 pb-67">
-              <h1 className="text-lg">7457+ Job Listed</h1>
-              <p className="text-xl py-32">Find Your Dream Job</p>
-              <p className="text-sm">We provide online instant cash loans with quick approval that suit your term length</p>
+            <div className="pt-[218px] pb-[67px]">
+              <h1 className="text-[48px]">7457+ Job Listed</h1>
+              <p className="text-[58px] py-[42px]">Find Your Dream Job</p>
+              <p className="text-[24px]">We provide online instant cash loans with quick <br /> approval that suit your term length</p>
             </div>
             <button className='btn'>Browse Job</button>
           </div>
         </section>
 
         <div className="container">
-          <Button t={Fetch}/>
+              {info && info.current && <Button s={'bg-black'} t={info.current.temp_c} />}
         </div>
     </main>
   );
 }
+

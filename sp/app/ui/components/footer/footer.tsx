@@ -47,7 +47,7 @@ export default function Footer() {
                                 <ul>
                                     <li>blablabla@gmail.com</li>
                                     <li className={`${f.footer__list}`}>blablabla@gmail.com</li>
-                                    <li>Canada - Ukrain</li>
+                                    <li>Canada - Ukraine</li>
                                 </ul>
                             </div>
                 
