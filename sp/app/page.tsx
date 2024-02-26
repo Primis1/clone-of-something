@@ -27,8 +27,8 @@ export default function Home() {
         </section>
 
         <div className="container">
-          { info && info.map((item, id) => (
-            <Button key={id} s={'bg-black'} t={item.title} />
+          { info && info.map((item: {id: number, title: string}) => (
+            <Button key={item.id} s={'bg-black'} t={item.title} />
           ))}
         </div>
 
