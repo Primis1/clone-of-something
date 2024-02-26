@@ -1,19 +1,20 @@
 'use client'
 import { useState, useEffect } from 'react'
-import Button from './ui/components/btn/button'
-
+import Button from './ui/components/btn/button';
 export default function Home() {
-  const [info, setInfo] = useState([]);
+  
 
-  useEffect(() => {
-    fetch('https://api.weatherapi.com/v1/current.json?key=dcf27b0a701c4de5907162206241601&q=Mississauga&aqi=no')
-    .then(response => response.json())
-    .then(data => setInfo(data))
-    .catch(error => console.error('Error:', error));
-  }, []);
+  const [info, setInfo] = useState<string[]>([]);
+
+      fetch('@/public/lib/prof.json') 
+      .then(response => response.json())
+      .then(data => setInfo(data))
+      .catch(error => console.error('Error:', error)); 
+
+  console.log(info)
 
   return (
-    <main>
+      <main>
         <section className='header__section'>
           <div className="container">
             <div className="pt-[218px] pb-[67px]">
@@ -26,9 +27,11 @@ export default function Home() {
         </section>
 
         <div className="container">
-              {info && info.current && <Button s={'bg-black'} t={info.current.temp_c} />}
+          { info && info.map((item, id) => (
+            <Button key={id} s={'bg-black'} t={item.title} />
+          ))}
         </div>
+
     </main>
   );
 }
-
