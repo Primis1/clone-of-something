@@ -4,14 +4,22 @@ import Button from './ui/components/btn/button';
 export default function Home() {
   
 
-  const [info, setInfo] = useState<string[]>([]);
+type InfoType = {
+  item: { id: number; title: string }[];
+};
 
-      fetch('@/public/lib/prof.json') 
-      .then(response => response.json())
-      .then(data => setInfo(data))
-      .catch(error => console.error('Error:', error)); 
+const [info, setInfo] = useState<InfoType | null>(null);
 
-  console.log(info)
+(async () => {
+  
+  fetch('https://primis1.github.io/json-holder/prof.json') 
+  .then(response => response.json())
+  .then(data => setInfo(data))
+  .catch(error => console.error('Error:', error));
+})
+
+
+
 
   return (
       <main>
@@ -27,8 +35,8 @@ export default function Home() {
         </section>
 
         <div className="container">
-          { info && info.map((item: {id: number, title: string}) => (
-            <Button key={item.id} s={'bg-black'} t={item.title} />
+          {info && info.item && info.item.map((bal: {id: number, title: string}) => (
+            <Button key={bal.id} s={'bg-black'} t={bal.title} />
           ))}
         </div>
 
