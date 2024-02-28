@@ -2,23 +2,30 @@
 import { useState, useEffect } from 'react'
 import Button from './ui/components/btn/button';
 export default function Home() {
-  
 
-type InfoType = {
-  item: { id: number; title: string }[];
-};
+type props ={ 
+  item: { id: number, title: string}
+}
 
-const [info, setInfo] = useState<InfoType | null>(null);
+const [info, setInfo] = useState<props | null | string[] | data<any> >([]);
+const [error, setError] = useState('');
 
-(async () => {
-  
-  fetch('https://primis1.github.io/json-holder/prof.json') 
-  .then(response => response.json())
-  .then(data => setInfo(data))
-  .catch(error => console.error('Error:', error));
-})
+useEffect(() => {
+  const fetchData = async () => {
+    fetch('https://primis1.github.io/json-holder/prof.json')
+    .then((response) => response.json)
+    .then((data) => setInfo(data))
+    .catch((error) => setError(`Error ${error}`))
+  }
+
+  fetchData();
+}, []);
 
 
+useEffect(() => {
+  console.log(info)
+  console.log(error)
+}, [info, error])
 
 
   return (
