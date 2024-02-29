@@ -26,7 +26,6 @@ useEffect(() => {
   };
 
   fetchData();
-  // return a cleanup function or add a dependency array here
 }, []);
 
 
