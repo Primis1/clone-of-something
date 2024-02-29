@@ -5,20 +5,28 @@ export default function Home() {
 
 type props ={ 
   item: { id: number, title: string}
+  data: any;
 }
 
-const [info, setInfo] = useState<props | null | string[] | data<any> >([]);
+const [info, setInfo] = useState<props | null | string[] >([]);
 const [error, setError] = useState('');
 
 useEffect(() => {
   const fetchData = async () => {
-    fetch('https://primis1.github.io/json-holder/prof.json')
-    .then((response) => response.json)
-    .then((data) => setInfo(data))
-    .catch((error) => setError(`Error ${error}`))
-  }
+    try {
+      const response = await fetch('./prof.json', {headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      }});
+      const data = await response.json(); // add parentheses here
+      setInfo(data);
+    } catch (error) {
+      setError(`Error ${error}`);
+    }
+  };
 
   fetchData();
+  // return a cleanup function or add a dependency array here
 }, []);
 
 
