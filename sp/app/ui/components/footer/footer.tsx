@@ -22,7 +22,7 @@ export default function Footer() {
                             <ul>
                                 <li>+437-445-3666</li>
                                 <li className={`${f.footer__list}`}>blablabla@gmail.com</li>
-                                <li>Canada - Ukrain</li>
+                                <li>Canada - Ukraine</li>
                             </ul>
                         </div>
 
@@ -33,21 +33,21 @@ export default function Footer() {
 
                                 <ul>
                                     <li>About</li>
-                                    <li className={`${f.footer__list}`}>blablabla@gmail.com</li>
-                                    <li>Canada - Ukraine</li>
+                                    <li className={`${f.footer__list}`}>FAQ</li>
+                                    <li>Hiring Tips</li>
                                 </ul>
                             </div>
                             
-                            <div className='flex-collumn'>        
+                            <div className='flex-collumn pl-[58px]'>        
                             
                 
                                 <h3 className={`${f.footer__title}`}>Catalog</h3>
 
 
                                 <ul>
-                                    <li>blablabla@gmail.com</li>
-                                    <li className={`${f.footer__list}`}>blablabla@gmail.com</li>
-                                    <li>Canada - Ukraine</li>
+                                    <li>Marketing</li>
+                                    <li className={`${f.footer__list}`}>UX/UI</li>
+                                    <li>Programmer</li>
                                 </ul>
                             </div>
                 

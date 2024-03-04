@@ -68,6 +68,13 @@ table {
   background-size: cover;
 }
 
+.section {
+  margin: 0 auto;
+  height: 1000px;
+  background: url('/section.png') no-repeat center;
+  background-size: cover;
+}
+
 h1 {
 
 }

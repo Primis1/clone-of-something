@@ -1,9 +1,11 @@
 
 .btn {
+    font: 14px;
     text-align: center;
-    border-style: none;
     border-radius: 10px;
     padding: 10px 30px;
     cursor: pointer;
     font-weight: medium;
+    display: inline-block;
+    margin: 20px;
 }
