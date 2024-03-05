@@ -1,40 +1,10 @@
-'use client'
-import { useState, useEffect } from 'react'
+
 import Button from './ui/components/btn/button';
 import Card from './ui/components/card/card';
+import useFetching from '@/app/lib/fetch'
 export default function Home() {
 
-type props ={ 
-  item: { id: number, title: string}
-  data: any;
-}
-
-const [info, setInfo] = useState<props | null | string[] >([]);
-const [error, setError] = useState('');
-
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const response = await fetch('./prof.json', {headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      }});
-      const data = await response.json(); // add parentheses here
-      setInfo(data);
-    } catch (error) {
-      setError(`Error ${error}`);
-    }
-  };
-
-  fetchData();
-}, []);
-
-
-useEffect(() => {
-  console.log(info)
-  console.log(error)
-}, [info, error])
-
+  const {info, error } = useFetching()
 
   return (
       <main>

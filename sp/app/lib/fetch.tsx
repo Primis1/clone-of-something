@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 
-export default function Fetching() {
+export default function useFetching() {
     type props ={ 
     bal: { id: number, title: string}
     data: any;
@@ -34,4 +34,6 @@ export default function Fetching() {
         console.log(info)
         console.log(error)
     }, [info, error])
+
+    return {info, error}
 }
