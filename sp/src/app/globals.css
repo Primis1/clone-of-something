@@ -75,6 +75,13 @@ table {
   background-size: cover;
 }
 
+.card-group__wrapper {
+  display: flex;
+  height: 1000px;
+  align-items: center;
+  justify-content: start;
+}
+
 h1 {
 
 }
@@ -95,6 +102,7 @@ ul {
   height: auto;
   max-width: 1300px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .btn {

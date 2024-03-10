@@ -13,7 +13,8 @@ export default function Card({im, h4, bg}: props) {
             <Image src={im}
                 width={52}
                 height={52}
-                alt="Logos" />
+                alt="Logos" 
+            />
             <h4>{h4}</h4>
             <p>50+ Availible positions</p>
         </div>
