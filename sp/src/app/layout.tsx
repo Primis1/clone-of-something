@@ -18,7 +18,7 @@ export default function RootLayout({
 {
   return (
     <html lang="en">
-      <body className={`${roboto.className} text-xl`}>
+      <body className={`${roboto.className} text-xl bg-[#eeeee4] `}>
               <Header />
               {children}
               <Footer />

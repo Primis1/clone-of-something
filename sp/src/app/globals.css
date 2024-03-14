@@ -75,6 +75,13 @@ table {
   background-size: cover;
 }
 
+.section-2 {
+  margin: 0 auto;
+  height: 1050px;
+  background: url('/section.png') no-repeat center;
+  background-size: cover;
+}
+
 .card-group__wrapper {
   display: flex;
   height: 1000px;
